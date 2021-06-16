@@ -7,11 +7,11 @@ import Gif from './gif';
 class GifList extends Component {
   render() {
     // const ids = ["gG6OcTSRWaSis", "13HgwGsXF0aiGY", "13UZisxBxkjPwI"];
-    const { ids } = this.props;
+    const { ids, changeSelectedGif } = this.props;
 
     return (
       <div className="gif-list">
-        { ids.map((id) => <Gif id={id} key={id} />)}
+        { ids.map((id) => <Gif id={id} key={id} changeSelectedGif={changeSelectedGif} />)}
       </div>
     );
   }
